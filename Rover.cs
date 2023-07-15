@@ -64,19 +64,19 @@ namespace MarsRover
             switch (CurrentDirection.GetType().Name)
             {
                 case "North":
-                    if(CurrentRoverPosition.Y > Pleatue.MinY)
+                    if(CurrentRoverPosition.Y >= Pleatue.MinY)
                         CurrentRoverPosition.Y = CurrentRoverPosition.Y+ 1;
                     break;
                 case "South":
-                    if (CurrentRoverPosition.Y < Pleatue.MaxY)
+                    if (CurrentRoverPosition.Y <= Pleatue.MaxY)
                         CurrentRoverPosition.Y = CurrentRoverPosition.Y - 1;
                     break;
                 case "East":
-                    if (CurrentRoverPosition.X < Pleatue.MaxX)
+                    if (CurrentRoverPosition.X <= Pleatue.MaxX)
                         CurrentRoverPosition.X = CurrentRoverPosition.X + 1;
                     break;
                 case "West":
-                    if (CurrentRoverPosition.X > Pleatue.MinX)
+                    if (CurrentRoverPosition.X >= Pleatue.MinX)
                         CurrentRoverPosition.X = CurrentRoverPosition.X - 1;
                     break;
                 default:
